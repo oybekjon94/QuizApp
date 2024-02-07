@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LeaderActivity">
+    tools:context=".activity.LeaderActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -64,35 +64,275 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.333"
+                    android:orientation="vertical">
 
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/imageView9"
-                        android:layout_width="137dp"
-                        android:layout_height="137dp"
-                        android:layout_marginBottom="50dp"
-                        android:layout_marginTop="12dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="1.0"
-                        app:shapeAppearanceOverlay="@style/circleImageView"
-                        app:strokeColor="#FEBB3A"
-                        app:strokeWidth="3dp" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/pic3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginBottom="24dp"
+                            android:padding="2dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0"
+                            app:shapeAppearanceOverlay="@style/circleImageView"
+                            app:strokeColor="#AE844F"
+                            app:strokeWidth="3dp" />
+
+                        <TextView
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:background="@drawable/circle_top_3"
+                            android:gravity="center"
+                            android:text="3"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/pic3"
+                            app:layout_constraintEnd_toEndOf="@+id/pic3"
+                            app:layout_constraintStart_toStartOf="@+id/pic3"
+                            app:layout_constraintTop_toBottomOf="@+id/pic3"
+                            tools:ignore="MissingConstraints" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/titleTop3Txt"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="TextView"
-                        tools:ignore="MissingConstraints" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                        android:text="title"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/score_top_3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/garnet" />
+
+                        <TextView
+                            android:id="@+id/scoreTopThreeTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="0000"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.333"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/pic1"
+                            android:layout_width="137dp"
+                            android:layout_height="137dp"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginBottom="24dp"
+                            android:padding="2dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0"
+                            app:shapeAppearanceOverlay="@style/circleImageView"
+                            app:strokeColor="#FEBB3A"
+                            app:strokeWidth="3dp" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/circle_top_1"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/white"
+                            android:textSize="23sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/pic1"
+                            app:layout_constraintEnd_toEndOf="@+id/pic1"
+                            app:layout_constraintStart_toStartOf="@+id/pic1"
+                            app:layout_constraintTop_toBottomOf="@+id/pic1"
+                            tools:ignore="MissingConstraints" />
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="-2dp"
+                            app:layout_constraintBottom_toTopOf="@+id/pic1"
+                            app:layout_constraintEnd_toEndOf="@+id/pic1"
+                            app:layout_constraintStart_toStartOf="@+id/pic1"
+                            app:srcCompat="@drawable/crown" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/titleTop1Txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="title"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/score_top_1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/garnet" />
+
+                        <TextView
+                            android:id="@+id/scoreTopOneTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="0000"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.333"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/pic2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginBottom="24dp"
+                            android:padding="2dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="1.0"
+                            app:shapeAppearanceOverlay="@style/circleImageView"
+                            app:strokeColor="#BFBFC0"
+                            app:strokeWidth="3dp" />
+
+                        <TextView
+                            android:layout_width="21dp"
+                            android:layout_height="21dp"
+                            android:background="@drawable/circle_top_2"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/pic2"
+                            app:layout_constraintEnd_toEndOf="@+id/pic2"
+                            app:layout_constraintStart_toStartOf="@+id/pic2"
+                            app:layout_constraintTop_toBottomOf="@+id/pic2"
+                            tools:ignore="MissingConstraints" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/titleTop2Txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="title"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/score_top_2"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/garnet" />
+
+                        <TextView
+                            android:id="@+id/scoreTopTwoTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="0000"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="80dp"
+                android:id="@+id/leaderView"
+                />
+
         </LinearLayout>
     </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

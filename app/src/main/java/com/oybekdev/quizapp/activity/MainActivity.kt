@@ -1,9 +1,10 @@
-package com.oybekdev.quizapp
+package com.oybekdev.quizapp.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import androidx.core.content.ContextCompat
+import com.oybekdev.quizapp.R
 import com.oybekdev.quizapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val window:Window = this@MainActivity.window
-        window.statusBarColor = ContextCompat.getColor(this@MainActivity,R.color.grey)
+        window.statusBarColor = ContextCompat.getColor(this@MainActivity, R.color.grey)
     }
 }
